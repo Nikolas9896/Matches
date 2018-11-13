@@ -73,8 +73,8 @@ public class Main
 	        }
 	    }
 	    //****function for convert usigned int to string for preview.
-	    String sInt = Integer.toUnsignedString(matches);
+	    String stringMatches = Integer.toUnsignedString(matches);
 	    //Output.
-	    System.out.println(" The minimum number of matches required to construct " + squares + " squares: " + sInt);
+	    System.out.println(" The minimum number of matches required to construct " + squares + " squares: " + stringMatches);
     }
 }
