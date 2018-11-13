@@ -30,12 +30,9 @@ public class Main
 	         System.out.println("Input number of squares:");
 	         Scanner S=new Scanner(System.in);
              squares=S.nextInt();
-        
-        
+               
 	        }
-	        
-	        
-	        
+	           
 	        // if n equel 4 
 	    if(squares == 4)
 	    
@@ -74,6 +71,7 @@ public class Main
 	    }
 	    //****function for convert usigned int to string for preview.
 	    String stringMatches = Integer.toUnsignedString(matches);
+	    
 	    //Output.
 	    System.out.println(" The minimum number of matches required to construct " + squares + " squares: " + stringMatches);
     }
