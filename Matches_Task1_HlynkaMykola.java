@@ -15,10 +15,12 @@ Output example #1
 import java.util.Scanner;
 public class Main
 {
-	public static void main(String[] args) 
-
-	{
-		int squares = 0, matches = 0, one1 = 1, billion = 1000000000;
+	public static void main(String[] args) {
+		
+		
+		// squares = number of squares;
+		// dataOfsquares = number of squares or addional operator in if condiction
+		int squares = 0, dataOfsquares, matches = 0, one1 = 1, billion = 1000000000;
 	    
 	    System.out.println("***Task 1: Matches***");
 	    
@@ -31,6 +33,48 @@ public class Main
         
         
 	        }
-	     System.out.println(" The minimum number of matches required to construct " + squares + " squares: " + matches);
-	}
+	        
+	        
+	        
+	        // if n equel 4 
+	    if(squares == 4)
+	    
+	        {
+	            matches = 12;
+	        }
+	        
+	        // if n less than 4 
+	    else if(squares < 4)
+	       {
+	           matches = 4 + ( squares - 1 ) * 3;
+	       }
+	       
+	       // if n much than 4
+	   else 
+	    {   
+	        //dataOfsquares used for condition
+	        dataOfsquares = squares;
+	        
+	        matches = 12 + ( dataOfsquares/4 - 1) * 10;
+	        
+	        dataOfsquares = dataOfsquares % 4;
+	        
+	        if( dataOfsquares == 1 )
+	        {
+	            matches = matches + 3;
+	        }
+	        else if( dataOfsquares == 2 )
+	        {
+	            matches = matches + 5;
+	        }
+	        else if( dataOfsquares == 3 )
+	        {
+	            matches = matches + 8;
+	        }
+	    }
+	    //****function for convert usigned int to string for preview.
+	    String sInt = Integer.toUnsignedString(matches);
+	    //Output.
+	    System.out.println(" The minimum number of matches required to construct " + squares + " squares: " + sInt);
+    }
 }
